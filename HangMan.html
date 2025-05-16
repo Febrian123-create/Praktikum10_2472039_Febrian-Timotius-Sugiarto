@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      gap: 40px;
+    }
+
+    .left-panel {
+      text-align: center;
+    }
+
+    .right-panel {
+      text-align: center;
+    }
+
+    #word {
+      font-size: 32px;
+      letter-spacing: 10px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #clue {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    input[type="text"] {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      text-align: center;
+      border: 1px solid #999;
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    button {
+      height: 40px;
+      padding: 0 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 1px solid #999;
+      background-color: white;
+      border-radius: 4px;
+    }
+
+    #message {
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="left-panel">
+      <img id="hangman-img" src="images/10.jpg" alt="Hangman Image" width="200">
+      <p id="lives">Lives : 10</p>
+    </div>
+
+    <div class="right-panel">
+      <p id="word">_ _ _ _ _ _</p>
+      <p id="clue">Clue: </p>
+      <div class="input-group">
+        <input type="text" id="letterInput" maxlength="1">
+        <button onclick="checkAnswer()">Check</button>
+      </div>
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script src="HangMan.js"></script>
+</body>
+</html>
